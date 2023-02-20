@@ -1,0 +1,26 @@
+.home{
+    display: flex;
+    flex-direction:column;
+    height:100vh;
+    background-color: lightblue;
+}
+
+
+.homeApps{
+    float: right;
+    padding-top: 20px;
+    padding-right: 15px;
+}
+.homeSetting{
+    float: right;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.homeSetting:hover,.homeApps:hover{
+    padding-top: 20px;
+    border-radius: 5x;
+    background-color: gray;
+
+}
+
