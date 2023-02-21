@@ -9,10 +9,10 @@ function Home() {
     <div className="home">
       <div className="home_header">
         <div className="homeSetting">
-          <SettingsIcon fontSize="large" />
+          <SettingsIcon fontSize="large" style={{color:"white"}}/>
         </div>
         <div className="homeApps">
-          <AppsIcon fontSize="large" />
+          <AppsIcon fontSize="large" style={{color:"white"}}/>
         </div>
       </div>
 
