@@ -7,14 +7,25 @@ import newsIcon from "./image/news_icon.png";
 import socialIcon from "./image/social_icon.png";
 import videoIcon from "./image/video_icon.png";
 import { useNavigate } from "react-router-dom";
+import { useStateValue } from "../StateProvider";
+import { actionTypes } from "../reducer"
+
 
 function Search({hideShortCut = false}) {
+  const [{}, dispatch] = useStateValue();
+
   const [input, setInput] = useState("");
   const navigate = useNavigate();
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
+      dispatch({
+        type: actionTypes.SET_SEARCH_TERM,
+        term: input
+      })
+
       navigate("/search");
+
     }
   };
 
