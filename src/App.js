@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Settings from './pages/Settings';
+
 
 function App() {
   return (
@@ -17,7 +19,16 @@ function App() {
     </div>
   );
 }
-
-
-
 export default App;
+
+
+
+// function App() {
+//   return (
+//     //BEM
+//     <div className="App">
+//       <Settings/>
+//     </div>
+//   );
+// }
+// export default App;
