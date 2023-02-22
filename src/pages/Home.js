@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import SettingsIcon from "@mui/icons-material/Settings";
-import AppsIcon from "@mui/icons-material/Apps";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import Search from "./Search";
 
 function Home() {
@@ -9,10 +9,10 @@ function Home() {
     <div className="home">
       <div className="home_header">
         <div className="homeSetting">
-          <SettingsIcon fontSize="large" style={{color:"white"}}/>
+          <SettingsOutlinedIcon fontSize="large" style={{color:"white"}}/>
         </div>
         <div className="homeApps">
-          <AppsIcon fontSize="large" style={{color:"white"}}/>
+          <AppsOutlinedIcon fontSize="large" style={{color:"white"}}/>
         </div>
       </div>
 
@@ -20,7 +20,7 @@ function Home() {
         <div className="webName">Webpage</div>
         <div className="home_inputContainer">
           {/* Search */}
-          <Search hideShortCut/>
+          <Search/>
         </div>
       </div>
     </div>
