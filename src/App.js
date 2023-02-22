@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Settings from './pages/Settings';
+import SearchPage from "./pages/SearchPage";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}>
           </Route>
-          <Route path="/search" element={<h1>Hello World</h1>}>
+          <Route path="/search" element={<SearchPage />}>
           </Route>
         </Routes>
       </Router>
@@ -22,14 +23,3 @@ function App() {
 }
 export default App;
 
-
-
-// function App() {
-//   return (
-//     //BEM
-//     <div className="App">
-//       <Settings/>
-//     </div>
-//   );
-// }
-// export default App;
