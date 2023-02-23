@@ -13,7 +13,7 @@ import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 
-import Response from "../Response";
+// import Response from "../Response";
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
