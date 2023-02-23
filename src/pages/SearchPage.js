@@ -83,8 +83,8 @@ function SearchPage() {
           {data &&
             data.output.results.map((item) => (
               <div className="searchPage_result">
-                <a className="searchPage_resultLink" href={item.c}>
-                  {item.a}
+                <a className="searchPage_resultLink" href={item.a}>
+                  {item.c}
                 </a>
                 <a className="searchPage_resultTitle" href={item.a}>
                   <h2>{item.t}</h2>
