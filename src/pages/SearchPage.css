@@ -1,18 +1,18 @@
 .searchPage{
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.850);
-}
+    background-color: rgb(37, 36, 36);
+} 
 
 .searchPage_header{
     display: flex;
     align-items: center; 
-    padding: 20px;
+    padding: 18px;
     border-bottom: 1px solid lightgrey;
 }
 
 .title{
     font-size: 50px;
     color: white;
+    margin-bottom: 50px;
     text-decoration: none;
 }
 
@@ -25,6 +25,7 @@
     z-index: 100;
     align-items: flex-start;
     border-bottom: 0px solid lightgrey;
+    flex-direction: column;
 }
 
 .searchPage_headerBody > .search > .search_input{
@@ -53,10 +54,50 @@
     display: flex;
 }
 
-.searchPage_optionRight{
-    display: flex;
+.searchPage_optionRightSetting{
+    margin-left:900px ;
+}
+.searchPage_optionRightSetting,.searchPage_optionRightSetting{
+    padding-right: 15px;
+    
 }
 
 .searchPage_option a{
     margin-left: 4px;
+}
+
+.searchPage_result{
+    margin: 40px 0;
+}
+
+
+.searchPage_results{
+    max-width: 650px;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-bottom: 100px;
+}
+
+.searchPage_resultTitle{
+    text-decoration: none;
+}
+
+.searchPage_resultTitle:hover{
+    text-decoration: underline;
+    color: lightblue;
+}
+
+.searchPage_resultTitle > h2{
+    font-weight: 500;
+    color: lightblue;
+}
+
+.searchPage_resultSnippet{
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.363)
+}
+
+.searchPage_resultLink{
+    text-decoration: none;
+    color: white;
 }

@@ -16,5 +16,4 @@ const useWebApi = (term) => {
 
   return { data };
 };
-
 export default useWebApi;
