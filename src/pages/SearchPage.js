@@ -12,6 +12,10 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
+import SkeletonSearchPage from "../skeletons/SkeletonSearchPage";
+
+
+
 
 // import Response from "../Response";
 
@@ -92,6 +96,10 @@ function SearchPage() {
                 <p className="searchPage_resultSnippet">{item.d}</p>
               </div>
             ))}
+          {!data && ([1,2,3,4,5].map((n) => 
+          <SkeletonSearchPage key={n} />
+          ))}
+          
         </div>
       )}
     </div>
