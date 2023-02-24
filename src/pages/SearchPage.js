@@ -14,9 +14,6 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import SkeletonSearchPage from "../skeletons/SkeletonSearchPage";
 
-
-
-
 // import Response from "../Response";
 
 function SearchPage() {
@@ -96,8 +93,8 @@ function SearchPage() {
                 <p className="searchPage_resultSnippet">{item.d}</p>
               </div>
             ))}
-          {!data && ([1,2,3,4,5].map((n) => 
-          <SkeletonSearchPage key={n} />
+          {!data && ([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((n) => 
+          <SkeletonSearchPage key={n} theme="dark"/>
           ))}
           
         </div>
@@ -108,20 +105,3 @@ function SearchPage() {
 
 export default SearchPage;
 
-{
-  /* {term && (
-      <div className="searchPage_results">
-        {data.output.results.map((item) => (
-          <div className="searchPage_result">
-            <a className="searchPage_resultLink" href={item.c}>
-              {item.a}
-            </a>
-            <a className="searchPage_resultTitle" href={item.a}>
-              <h2>{item.t}</h2>
-            </a>
-            <p className="searchPage_resultSnippet">{item.d}</p>
-          </div>
-        ))}
-      </div>
-      )} */
-}
