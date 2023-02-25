@@ -71,6 +71,78 @@
   margin-left: 4px;
 }
 
+.searchPage_option:first-child:hover{
+    transition: color 0.7s ease;
+    color: lightblue;
+    transition: transform 0.7s ease;
+    transform: scale(1.2);
+}
+
+.searchPage_option:nth-child(2):hover{
+    transition: color 0.7s ease;
+    color: lightcoral;
+    transition: transform 0.7s ease;
+    transform: scale(1.2);
+}
+
+.searchPage_option:nth-child(3):hover{
+    transition: color 0.7s ease;
+    color: pink;
+    transition: transform 0.7s ease;
+    transform: scale(1.2);
+}
+
+.searchPage_option:nth-child(4):hover{
+    transition: color 0.7s ease;
+    color: lightcyan;
+}
+
+.searchPage_option:nth-child(5):hover{
+    transition: color 0.7s ease;
+    color: yellowgreen;
+    transition: transform 0.7s ease;
+    transform: scale(1.2);
+}
+
+.searchPage_option:nth-child(6):hover{
+    transition: color 0.7s ease;
+    color: lightgreen;
+    transition: transform 0.7s ease;
+    transform: scale(1.2);
+}
+
+
+.searchPage_option:first-child a:hover{
+    
+    color: white;
+}
+
+.searchPage_option:nth-child(2) a:hover{
+    
+    color: white;
+}
+
+.searchPage_option:nth-child(3) a:hover{
+    
+    color: white;
+}
+
+.searchPage_option:nth-child(4) a:hover{
+    
+    color: white;
+}
+
+.searchPage_option:nth-child(5) a:hover{
+    
+    color: white;
+}
+
+.searchPage_option:nth-child(6) a:hover{
+
+    color: white;
+}
+
+
 .searchPage_result {
   margin: 40px 0;
 }
