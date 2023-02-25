@@ -58,23 +58,20 @@ function SearchPage() {
                 <Link to="/maps">Maps</Link>
               </div>
             </div>
-            <div className="searchPage_optionRight">
-              <div className="searchPage_optionRightSetting">
-                <Link to="/setting">
-                  <SettingsOutlinedIcon
-                    style={{ color: "gray" }}
-                    fontSize="large"
-                  />
-                </Link>
-              </div>
-              <div className="searchPage_optionRightApps">
-                <Link to="/setting">
-                  <AppsOutlinedIcon
-                    style={{ color: "gray" }}
-                    fontSize="large"
-                  />
-                </Link>
-              </div>
+          </div>
+          <div className="searchPage_optionRight">
+            <div className="searchPage_optionRightSetting">
+              <Link to="/setting">
+                <SettingsOutlinedIcon
+                  style={{ color: "gray" }}
+                  fontSize="large"
+                />
+              </Link>
+            </div>
+            <div className="searchPage_optionRightApps">
+              <Link to="/setting">
+                <AppsOutlinedIcon style={{ color: "gray" }} fontSize="large" />
+              </Link>
             </div>
           </div>
         </div>
@@ -93,10 +90,10 @@ function SearchPage() {
                 <p className="searchPage_resultSnippet">{item.d}</p>
               </div>
             ))}
-          {!data && ([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((n) => 
-          <SkeletonSearchPage key={n} theme="dark"/>
-          ))}
-          
+          {!data &&
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((n) => (
+              <SkeletonSearchPage key={n} theme="dark" />
+            ))}
         </div>
       )}
     </div>
@@ -104,4 +101,3 @@ function SearchPage() {
 }
 
 export default SearchPage;
-

@@ -1,5 +1,6 @@
 .searchPage{
     background-color: rgb(32,33,36);
+    width: 100vw;
 } 
 
 .searchPage_header{
@@ -7,6 +8,9 @@
     align-items: center; 
     padding: 18px;
     border-bottom: 1px solid lightgrey;
+    background-color: rgb(32,33,36);
+    width: 112em;
+
 }
 
 .title{
@@ -54,9 +58,6 @@
     display: flex;
 }
 
-.searchPage_optionRightSetting{
-    margin-left:900px ;
-}
 .searchPage_optionRightSetting,.searchPage_optionRightSetting{
     padding-right: 15px;
     
@@ -70,6 +71,13 @@
     margin: 40px 0;
 }
 
+.searchPage_optionRight{
+    display: flex;
+    position: absolute;
+    left: 90em;
+    margin-top: 10px;
+    
+}
 
 .searchPage_results{
     max-width: 850px;
