@@ -96,6 +96,11 @@ function SearchPage() {
             ))}
         </div>
       )}
+
+      <div className="footer">
+        <div className="footerServices">Services</div>
+        <div className="footerAbout">About Webpage</div>
+      </div>
     </div>
   );
 }
