@@ -18,7 +18,7 @@ import SkeletonSearchPage from "../skeletons/SkeletonSearchPage";
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
-  const { data } = useWebApi(term);
+  const { data, isLoading } = useWebApi(term);
 
   //Mock API CALL
   // const data = Response;
@@ -78,7 +78,7 @@ function SearchPage() {
       </div>
       {term && (
         <div className="searchPage_results">
-          {data &&
+          {data && !isLoading &&
             data.output.results.map((item) => (
               <div className="searchPage_result">
                 <a className="searchPage_resultLink" href={item.a}>
@@ -90,7 +90,7 @@ function SearchPage() {
                 <p className="searchPage_resultSnippet">{item.d}</p>
               </div>
             ))}
-          {!data &&
+          {isLoading &&
             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((n) => (
               <SkeletonSearchPage key={n} theme="dark" />
             ))}
