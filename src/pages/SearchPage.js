@@ -78,7 +78,8 @@ function SearchPage() {
       </div>
       {term && (
         <div className="searchPage_results">
-          {data && !isLoading &&
+          {data &&
+            !isLoading &&
             data.output.results.map((item) => (
               <div className="searchPage_result">
                 <a className="searchPage_resultLink" href={item.a}>
