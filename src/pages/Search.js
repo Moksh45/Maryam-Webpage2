@@ -9,10 +9,12 @@ import videoIcon from "./image/video_icon.png";
 import { useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 import { actionTypes } from "../reducer";
+import VoiceSearch from './VoiceSearch/index'
+
 
 function Search({ hideShortCut = false }) {
   const [{}, dispatch] = useStateValue();
-
+  const [voiceSearch, setVoiceSearch] = useState(false);
   const [input, setInput] = useState("");
   const navigate = useNavigate();
   const handleKeyDown = (e) => {
@@ -29,8 +31,17 @@ function Search({ hideShortCut = false }) {
     }
   };
 
+
+  const openVoiceSearch = ()=>{
+    setVoiceSearch(true);
+  }
+  const closeVoiceSearch = ()=>{
+    setVoiceSearch(false);
+  }
+
   return (
     <form className="search">
+      {voiceSearch ? (<VoiceSearch closeVoiceSearch={closeVoiceSearch}/>) : null }
       <div className="search_input">
         <SearchIcon />
         <input
@@ -39,7 +50,7 @@ function Search({ hideShortCut = false }) {
           onKeyDown={handleKeyDown}
           placeholder="Search anything"
         />
-        <MicIcon />
+        <MicIcon onClick={()=>openVoiceSearch()}/>
       </div>
 
       {!hideShortCut ? (
