@@ -9,8 +9,8 @@ import videoIcon from "./image/video_icon.png";
 import { useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 import { actionTypes } from "../reducer";
-import VoiceSearch from './VoiceSearch/index'
-
+import VoiceSearch from "./VoiceSearch/index";
+import { recognition } from "./VoiceSearch/VoiceRecognition";
 
 function Search({ hideShortCut = false }) {
   const [{}, dispatch] = useStateValue();
@@ -31,17 +31,39 @@ function Search({ hideShortCut = false }) {
     }
   };
 
-
-  const openVoiceSearch = ()=>{
+  const openVoiceSearch = () => {
     setVoiceSearch(true);
-  }
-  const closeVoiceSearch = ()=>{
+    recognition.start();
+    recognition.onresult = (event) => {
+      const { transcript } = event.results[0][0];
+      if (transcript !== null || transcript !== "" || transcript !== " ") {
+        setVoiceSearch(false);
+        setInput(transcript);
+        console.log(transcript);
+      } else {
+        setVoiceSearch(false);
+      }
+    };
+  };
+  const closeVoiceSearch = () => {
     setVoiceSearch(false);
-  }
+    recognition.stop();
+  };
 
   return (
     <form className="search">
-      {voiceSearch ? (<VoiceSearch closeVoiceSearch={closeVoiceSearch}/>) : null }
+      {voiceSearch ? <VoiceSearch closeVoiceSearch={closeVoiceSearch} /> : null}
+      {/* {voiceSearch && !hideShortCut ? (
+        <VoiceSearch
+          cssClass="micIcon__visible_voiceModal"
+          closeVoiceSearch={closeVoiceSearch}
+        />
+      ) : (
+        <VoiceSearch
+          cssClass="micIcon__hidden_voiceModal"
+          closeVoiceSearch={closeVoiceSearch}
+        />
+      )} */}
       <div className="search_input">
         <SearchIcon />
         <input
@@ -50,7 +72,7 @@ function Search({ hideShortCut = false }) {
           onKeyDown={handleKeyDown}
           placeholder="Search anything"
         />
-        <MicIcon onClick={()=>openVoiceSearch()}/>
+        <MicIcon onClick={() => openVoiceSearch()} />
       </div>
 
       {!hideShortCut ? (

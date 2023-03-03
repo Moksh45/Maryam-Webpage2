@@ -3,16 +3,16 @@ import "./index.css";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import MicRoundedIcon from "@mui/icons-material/MicRounded";
 
-const VoiceSearch = ({closeVoiceSearch}) => {
+const VoiceSearch = ({ closeVoiceSearch }) => {
   return (
     <div className="voiceModal">
-      <div className="voiceSearch">
+      <div className="voiceSearch ">
         <div className="voiceSearchBox">
           <h3>Voice Search</h3>
-          <CloseRoundedIcon onClick={()=>closeVoiceSearch()}/>
+          <CloseRoundedIcon onClick={() => closeVoiceSearch()} />
         </div>
         <div className="voiceModalMic">
-          <MicRoundedIcon fontSize="large"/>
+          <MicRoundedIcon fontSize="large" />
         </div>
       </div>
     </div>
