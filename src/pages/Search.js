@@ -11,6 +11,7 @@ import { useStateValue } from "../StateProvider";
 import { actionTypes } from "../reducer";
 import VoiceSearch from "./VoiceSearch/index";
 import { recognition } from "./VoiceSearch/VoiceRecognition";
+import { Tooltip } from "@mui/material";
 
 function Search({ hideShortCut = false }) {
   const [{}, dispatch] = useStateValue();
@@ -53,17 +54,6 @@ function Search({ hideShortCut = false }) {
   return (
     <form className="search">
       {voiceSearch ? <VoiceSearch closeVoiceSearch={closeVoiceSearch} /> : null}
-      {/* {voiceSearch && !hideShortCut ? (
-        <VoiceSearch
-          cssClass="micIcon__visible_voiceModal"
-          closeVoiceSearch={closeVoiceSearch}
-        />
-      ) : (
-        <VoiceSearch
-          cssClass="micIcon__hidden_voiceModal"
-          closeVoiceSearch={closeVoiceSearch}
-        />
-      )} */}
       <div className="search_input">
         <SearchIcon />
         <input
@@ -72,7 +62,9 @@ function Search({ hideShortCut = false }) {
           onKeyDown={handleKeyDown}
           placeholder="Search anything"
         />
-        <MicIcon onClick={() => openVoiceSearch()} />
+        <Tooltip title="Search by voice">
+          <MicIcon onClick={() => openVoiceSearch()} />
+        </Tooltip>
       </div>
 
       {!hideShortCut ? (

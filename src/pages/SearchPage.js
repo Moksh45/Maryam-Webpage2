@@ -13,6 +13,7 @@ import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import SkeletonSearchPage from "../skeletons/SkeletonSearchPage";
+import { Tooltip } from "@mui/material";
 
 // import Response from "../Response";
 
@@ -62,15 +63,22 @@ function SearchPage() {
           <div className="searchPage_optionRight">
             <div className="searchPage_optionRightSetting">
               <Link to="/setting">
-                <SettingsOutlinedIcon
-                  style={{ color: "gray" }}
-                  fontSize="large"
-                />
+                <Tooltip title="Setting">
+                  <SettingsOutlinedIcon
+                    style={{ color: "gray" }}
+                    fontSize="large"
+                  />
+                </Tooltip>
               </Link>
             </div>
             <div className="searchPage_optionRightApps">
               <Link to="/setting">
-                <AppsOutlinedIcon style={{ color: "gray" }} fontSize="large" />
+                <Tooltip title="Apps">
+                  <AppsOutlinedIcon
+                    style={{ color: "gray" }}
+                    fontSize="large"
+                  />
+                </Tooltip>
               </Link>
             </div>
           </div>
